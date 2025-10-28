@@ -28,9 +28,12 @@ From Sales.Orders o
 Join Sales.OrderDetails d on o.orderid = d.orderid
 Where d.discount = 0
 
-Select Top 10 * From #Table1
+Select count(*) as total from #table1;
 --3
-
+Select top 0 *
+Into #Table2
+From Sales.Orders
+Select * From #Table2;
 --4
 
 --5
