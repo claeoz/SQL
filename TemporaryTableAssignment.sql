@@ -35,7 +35,16 @@ Into #Table2
 From #Table1
 Select * From #Table2;
 --4
+Alter table #Table1
+Add newPrice money null
 
+update t
+Set newPrice = d.unitprice * 0.97
+From #Table1 t
+join Sales.OrderDetails d
+On t.orderid = d.orderid
+
+select top 10 * From #Table1;
 --5
 
 --6
