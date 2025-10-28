@@ -11,7 +11,6 @@ select Top 1 * from Sales.OrderDetails;
 --2
 Insert Into #Table1
 Select 
-	o.orderid, 
 	o.custid, 
 	o.empid, 
 	o.orderdate, 
@@ -28,7 +27,6 @@ Select
 From Sales.Orders o
 Join Sales.OrderDetails d on o.orderid = d.orderid
 Where d.discount = 0
-Set IDENTITY_INSERT #Table1 OFF;
 
 Select Top 10 * From #Table1
 --3
