@@ -30,9 +30,9 @@ Where d.discount = 0
 
 Select count(*) as total from #table1;
 --3
-Select top 0 *
+Select *
 Into #Table2
-From Sales.Orders
+From #Table1
 Select * From #Table2;
 --4
 
